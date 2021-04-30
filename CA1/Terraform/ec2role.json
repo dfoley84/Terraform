@@ -1,0 +1,47 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "VisualEditor0",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:GetPasswordData",
+        "ec2:GetLaunchTemplateData",
+        "ec2:GetManagedPrefixListEntries",
+        "ec2:GetAssociatedIpv6PoolCidrs",
+        "ec2:GetHostReservationPurchasePreview",
+        "ec2:GetCapacityReservationUsage",
+        "ec2:GetManagedPrefixListAssociations",
+        "ec2:GetConsoleScreenshot",
+        "ec2:GetAssociatedEnclaveCertificateIamRoles",
+        "ec2:GetConsoleOutput"
+      ],
+      "Resource": [
+        "arn:aws:ec2:*:325711824175:capacity-reservation/*",
+        "arn:aws:ec2:*:325711824175:dedicated-host/*",
+        "arn:aws:ec2:*:325711824175:prefix-list/*",
+        "arn:aws:ec2:*:325711824175:ipv6pool-ec2/*",
+        "arn:aws:ec2:*:325711824175:instance/*",
+        "arn:aws:acm:*:325711824175:certificate/*"
+      ]
+    },
+    {
+      "Sid": "VisualEditor1",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:GetDefaultCreditSpecification",
+        "ec2:DescribeScheduledInstances",
+        "ec2:GetCoipPoolUsage",
+        "ec2:DescribeTags",
+        "ec2:DescribeVpnConnections",
+        "ec2:GetEbsEncryptionByDefault",
+        "ec2:DescribeScheduledInstanceAvailability",
+        "ec2:DescribeVolumesModifications",
+        "ec2:GetEbsDefaultKmsKeyId",
+        "ec2:DescribeFastSnapshotRestores",
+        "ec2:DescribeElasticGpus"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
