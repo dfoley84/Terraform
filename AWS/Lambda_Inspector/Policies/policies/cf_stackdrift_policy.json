@@ -1,0 +1,31 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents",
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents",
+                "cloudformation:DescribeStacks",
+                "cloudformation:DetectStackDrift",
+                "cloudformation:DescribeStackDriftDetectionStatus",
+                "cloudformation:ListStackResources",
+                "cloudformation:DescribeStackResourceDrifts",
+                "cloudformation:ListStacks",
+                "cloudformation:DescribeChangeSet",
+                "sns:Publish",
+                "lambda:PublishLayerVersion",
+                "sns:Subscribe",
+                "sns:CreateTopic",
+                "sns:GetTopicAttributes",
+                "sns:SetTopicAttributes"
+            ],
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}
