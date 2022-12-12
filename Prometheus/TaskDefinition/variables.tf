@@ -1,0 +1,1 @@
+variable "arn_prometheus_role" {}
