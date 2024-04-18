@@ -4,7 +4,7 @@ resource "aws_ecs_task_definition" "prometheus" {
   container_definitions = jsonencode([
     {
         name = "prometheus"
-        image = "prom/prometheus:v2.4.0"
+        image = ".dkr.ecr.eu-west-1.amazonaws.com/prometheus:latest"
         cpu = 512
         memory = 512
         MemoryReservation = 256
@@ -14,6 +14,24 @@ resource "aws_ecs_task_definition" "prometheus" {
             hostPort = 9090
             protocol = "tcp"
         }]
+        environment = [
+            {
+                name = "AWSREGION"
+                value = var.aws_region
+            },
+            {
+                name = "ZONE"
+                value = var.aws_regionzone
+            },
+            {
+                name = "AWSROLE"
+                value = var.arn_prometheus_role
+            },
+            {
+                name = "REMOTE"
+                value = var.prometheus_remotewrite
+            }
+        ]
         essential = true
     }   
     ])
