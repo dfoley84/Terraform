@@ -1,0 +1,1 @@
+variable "slack_alert" {}
